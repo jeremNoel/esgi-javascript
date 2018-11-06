@@ -1,6 +1,6 @@
 function ucfirst(str) {
     if(typeof str === "string") {
-        return str.toLowerCase().charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+        return str.toLowerCase().charAt(0).toUpperCase() + str.slice(1);
     } else {
         return "";
     }  
@@ -12,7 +12,7 @@ function capitalize(str) {
         var result = [];
             
         for(var i = 0; i < array.length; i++){
-            result.push(ucfirst(array[i]));
+            result.push(ucfirst(array[i].toLowerCase()));
         }
         return result.join(' ');
     } else {
@@ -22,7 +22,7 @@ function capitalize(str) {
 
 function camelCase(str) {
     if(typeof str === "string") {
-        return capitalize(str).split(' ').join('');
+        return capitalize(str).replace('_', '').split(' ').join('');
     } else {
         return "";
     } 
