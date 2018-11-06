@@ -1,7 +1,3 @@
-var str = "ToggleCase is the coolest";
-
-camelCase(str);
-
 function ucfirst(str) {
     if(typeof str === "string") {
         return str.toLowerCase().charAt(0).toUpperCase() + str.slice(1);
@@ -26,7 +22,7 @@ function capitalize(str) {
 
 function camelCase(str) {
     if(typeof str === "string") {
-        console.log(capitalize(str.replace('_', ' ')).split(' ').join(''));
+        return capitalize(str.replace('_', ' ')).split(' ').join('');
     } else {
         return "";
     } 
