@@ -1,6 +1,6 @@
 function ucfirst(str) {
     if(typeof str === "string") {
-        return str.charAt(0).toUpperCase() + str.slice(1);
+        return str.toLowerCase().charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     } else {
         return "";
     }  
@@ -11,8 +11,8 @@ function capitalize(str) {
         var array = str.split(' ');
         var result = [];
             
-        for(var x = 0; x < array.length; x++){
-            result.push(ucfirst(array[x]));
+        for(var i = 0; i < array.length; i++){
+            result.push(ucfirst(array[i]));
         }
         return result.join(' ');
     } else {
