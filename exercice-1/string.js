@@ -1,6 +1,7 @@
 // var str = "anaconda";
 // leet(str);
 
+
 function ucfirst(str) {
     if(typeof str === "string") {
         return str.toLowerCase().charAt(0).toUpperCase() + str.slice(1);
@@ -41,7 +42,7 @@ function snake_case(str) {
 
 function leet(str) {
     if(typeof str === "string") {
-        var checker = str.toLowerCase().split('');
+        var checker = str.split('');
         for(var i = 0; i < checker.length; i++){
             switch (checker[i]) {
                 case 'a':
