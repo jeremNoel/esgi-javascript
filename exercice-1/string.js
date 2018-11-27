@@ -1,3 +1,6 @@
+// var str = "anaconda";
+// leet(str);
+
 function ucfirst(str) {
     if(typeof str === "string") {
         return str.toLowerCase().charAt(0).toUpperCase() + str.slice(1);
@@ -31,6 +34,39 @@ function camelCase(str) {
 function snake_case(str) {
     if(typeof str === "string") {
         return str.toLowerCase().split(' ').join('_');
+    } else {
+        return "";
+    } 
+}
+
+function leet(str) {
+    if(typeof str === "string") {
+        var checker = str.toLowerCase().split('');
+        for(var i = 0; i < checker.length; i++){
+            switch (checker[i]) {
+                case 'a':
+                    checker[i] = '4';
+                    break;
+                case 'e':
+                    checker[i] = '3';
+                    break;
+                case 'i':
+                    checker[i] = '1';
+                    break;
+                case 'o':
+                    checker[i] = '0';
+                    break;
+                case 'u':
+                    checker[i] = '(_)';
+                    break;
+                case 'y':
+                    checker[i] = '7';
+                    break;
+                default:
+                    break;
+              }
+        }
+        return checker.join('');
     } else {
         return "";
     } 
