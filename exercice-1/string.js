@@ -1,5 +1,5 @@
-// var str = "anaconda";
-// leet(str);
+var str = "toto titi tata";
+verlan(str);
 
 
 function ucfirst(str) {
@@ -71,4 +71,32 @@ function leet(str) {
     } else {
         return "";
     } 
+}
+
+function verlan(str) {
+    if(typeof str === "string") {
+        var temp = str.split(' ');
+        var result = [];
+
+    for (var i = 0; i < temp.length; i++) {
+        var toBeReversed = temp[i].split('');
+        var reversedArray = toBeReversed.reverse();
+        result.push(reversedArray.join(''));
+    }
+    return result.join(' ');
+    } else {
+        return "";
+    }
+}
+
+function prop_access(input, path){
+    var pathArray = path.split(".");
+    for(var i = 0; i < pathArray.length; i++){
+      if(input[pathArray[i]] === undefined){
+        console.error('path exist');
+        return null;
+      }
+      input = input[pathArray[i]];
+    }
+    return input;
 }
