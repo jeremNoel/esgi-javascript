@@ -1,5 +1,5 @@
 var str = "toto titi tata";
-verlan(str);
+yoda(str);
 
 
 function ucfirst(str) {
@@ -84,6 +84,14 @@ function verlan(str) {
         result.push(reversedArray.join(''));
     }
     return result.join(' ');
+    } else {
+        return "";
+    }
+}
+
+function yoda(str) {
+    if(typeof str === "string") {
+       return str.split(' ').reverse().join(' ');
     } else {
         return "";
     }
